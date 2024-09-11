@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
+
+:root {
+  --bg-color: rgba(255, 255, 255, 0.8); /* Adjust as needed */
+  --scrollbar-thumb-color: rgba(136, 136, 136, 0.281);
+  --scrollbar-thumb-hover-color: #555;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  background-image: url("./background.png");
+  background-position: center;
+  background-size: cover;
+  font-family: 'Work Sans', sans-serif; /* Ensure the font is applied */
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Adjusted width for better visibility */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: 10px; /* Optional: Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover-color);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) transparent;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column; /* Change layout direction for smaller screens */
+  }
+}
